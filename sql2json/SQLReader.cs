@@ -451,9 +451,9 @@ namespace sql2json
                             endIdx = line.Length;
                             break;
                         }
-                        else if (line[endIdx - 1] == '\\')
+                        else if (line[endIdx + 1] == '\'')
                         {
-                            idx = endIdx + 1;
+                            idx = endIdx + 2;
                             continue;
                         }
                         endIdx++;
